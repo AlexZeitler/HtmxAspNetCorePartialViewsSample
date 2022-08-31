@@ -1,4 +1,4 @@
-namespace AspNetCoreMvcHtmx.Controllers;
+namespace AspNetPartialViewsHtmx.Controllers;
 
 public static class Constants
 {

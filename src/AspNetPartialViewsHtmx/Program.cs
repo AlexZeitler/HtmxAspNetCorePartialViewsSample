@@ -1,4 +1,4 @@
-using AspNetCoreMvcHtmx.Core;
+using AspNetPartialViewsHtmx.Core;
 using Serilog;
 using Serilog.Extensions.Logging;
 

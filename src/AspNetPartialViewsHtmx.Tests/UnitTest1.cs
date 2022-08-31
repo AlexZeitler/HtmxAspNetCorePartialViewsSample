@@ -1,4 +1,4 @@
-namespace AspNetCoreMvcHtmx.Tests;
+namespace AspNetPartialViewsHtmx.Tests;
 
 public class UnitTest1
 {

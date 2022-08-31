@@ -2,7 +2,7 @@ using Serilog;
 using Serilog.Extensions.Logging;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
-namespace AspNetCoreMvcHtmx.Core;
+namespace AspNetPartialViewsHtmx.Core;
 
 public static class LoggingRegistration
 {

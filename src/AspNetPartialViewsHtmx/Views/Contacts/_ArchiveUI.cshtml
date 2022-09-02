@@ -1,0 +1,18 @@
+@model ContactViewModel
+
+@if (Model.Archived)
+{
+  <button class="inline-flex items-center rounded-full border border-gray-300 bg-white px-2.5 py-0.5 text-sm font-medium leading-5 text-gray-700 shadow-sm hover:bg-gray-50"
+          hx-patch="/contacts/@Model.Id/unarchive"
+          hx-swap="outerHTML">
+    Unarchive
+  </button>
+}
+else
+{
+  <button class="inline-flex items-center rounded-full border border-gray-300 bg-white px-2.5 py-0.5 text-sm font-medium leading-5 text-gray-700 shadow-sm hover:bg-gray-50"
+          hx-delete="/contacts/@Model.Id"
+          hx-swap="outerHTML">
+    Archive
+  </button>
+}

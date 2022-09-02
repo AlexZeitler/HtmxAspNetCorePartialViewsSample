@@ -1,0 +1,19 @@
+@model IReadOnlyCollection<ContactViewModel>
+
+@{
+  ViewBag.Title = "Contacts";
+  Layout = "_Layout";
+}
+
+<h2>Contacts</h2>
+<div class="w-80">
+  <div class="mt-6 flow-root">
+    <ul class="-my-5 divide-y divide-gray-200"
+        role="list">
+      @foreach (var contact in Model)
+      {
+        @(await Html.PartialAsync("_ContactDetails", contact))
+      }
+    </ul>
+  </div>
+</div>

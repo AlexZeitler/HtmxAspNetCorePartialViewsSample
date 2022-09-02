@@ -1,6 +1,6 @@
 # AspNet (Core)  MVC Template
 
-This is a GitHub Template for ASP.NET Core MVC using .NET 6.
+This is an ASP.NET Core Sample for [HTMX Template Fragments](https://htmx.org/essays/template-fragments/)
 
 It contains
 
@@ -10,17 +10,9 @@ It contains
 * HTMX .NET extensions
 * TailwindCSS 3 including hot reload (JIT)
 * tmux/tmuxinator windows / panes for development
+* MartenDb Document Store based on Postgres
 
 ## Usage
-
-### Create a new Repository
-
-* Create a new Repository from this Template as described [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
-* Clone your new repository locally
-
-### Run the solution
-
-#### First time
 
 ```
 yarn install
@@ -46,47 +38,11 @@ yarn start
 ##### Frontend (tailwind build)
 ![](assets/screenshot_item_tailwind.png)
 
-Browse https://localhost:5001
+Browse https://localhost:5001/contacts
 
 ![](assets/screenshot.png)
-
-#### HTMX interaction
-
-HTMX usage is shown on the Registration view, even the password strength indicator is build with pure ASP.NET and HTMX (no additional JavaScript)
-
-![](assets/PasswordStrengthIndicator.gif)
 
 ## Known issues
 
 * Not tested on Windows
 * JetBrains Rider code completion does not work for TailwindCSS 3 JIT mode in `.cshtml` files [currently](https://youtrack.jetbrains.com/issue/RIDER-58725).
-
-## Renaming solution / project / folders
-
-Of course, you want to rename the projects files to match our needs.
-
-You can use these commands, e.g. `AspNetPartialViewsHtmx`  gets renamed to `MyApp`:
-
-### Rename all references inside the files
-
-#### macOS
-
-```shell
-LC_ALL=C find . -type f -name '*.*' -not \( -path './node_modules/*' -o -path './src/AspNetPartialViewsHtmx/node_modules/*' -o -path './assets' \) -exec sed -i '' 's|AspNetPartialViewsHtmx|MyApp|g' {} \;
-```
-
-#### Linux
-
-```shell
-LC_ALL=C find . -type f -name '*.*' -not \( -path './node_modules/*' -o -path './src/AspNetPartialViewsHtmx/node_modules/*' -o -path './assets' \) -exec sed -i 's/AspNetPartialViewsHtmx/MyApp/g' {} \;
-```
-
-### Rename files and folders
-
-#### macOS and Linux
-
-```bash
-find . -depth -name "*AspNetPartialViewsHtmx*" | \
-while IFS= read -r ent; do mv $ent ${ent%AspNetPartialViewsHtmx*}MyApp${ent##*AspNetPartialViewsHtmx}; done
-
-```

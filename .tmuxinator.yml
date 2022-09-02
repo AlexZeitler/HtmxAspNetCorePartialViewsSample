@@ -25,6 +25,10 @@ windows:
   - app:
       layout: even-vertical
       panes:
+        - database:
+            - printf '\033]2;%s\033\\' 'database'
+            - cd database
+            - docker compose up
         - server:
             - printf '\033]2;%s\033\\' 'app'
             - cd src/AspNetPartialViewsHtmx
@@ -35,6 +39,13 @@ windows:
             - printf '\033]2;%s\033\\' 'app-workspace'
             - cd src/AspNetPartialViewsHtmx
             - clear
+  - test:
+      layout: even-vertical
+      panes:
+        - test-database:
+            - printf '\033]2;%s\033\\' 'test-database'
+            - cd test-database
+            - docker compose up
   - frontend:
       layout: even-vertical
       panes:

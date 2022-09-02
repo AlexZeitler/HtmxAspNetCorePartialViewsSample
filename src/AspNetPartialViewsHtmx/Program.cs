@@ -1,3 +1,4 @@
+using AspNetPartialViewsHtmx.Contacts;
 using AspNetPartialViewsHtmx.Core;
 using Serilog;
 using Serilog.Extensions.Logging;
@@ -7,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.AddLogging();
 var logger = new SerilogLoggerFactory(Log.Logger)
   .CreateLogger<Program>();
+
+builder.Services.UseDocumentStore(builder.Configuration);
+builder.Services.AddContacts();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

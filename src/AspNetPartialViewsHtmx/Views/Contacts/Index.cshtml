@@ -5,6 +5,18 @@
   Layout = "_Layout";
 }
 
+@section Details {
+  <li>
+    
+  @await RenderSectionAsync("Archive")
+  </li>
+}
+
+@section Archive {
+  <div>archive</div>
+}
+
+
 <h2>Contacts</h2>
 <div class="w-80">
   <div class="mt-6 flow-root">
@@ -12,7 +24,7 @@
         role="list">
       @foreach (var contact in Model)
       {
-        @(await Html.PartialAsync("_ContactDetails", contact))
+        @await RenderSectionAsync("Details")
       }
     </ul>
   </div>
